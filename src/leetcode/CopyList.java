@@ -6,6 +6,7 @@ import java.util.HashMap;
 
 public class CopyList {
 	HashMap<Node, Node> visit = new HashMap();
+	/*
 	public Node copyRandomList(Node head) {
 		if(head == null) {
 			return null;
@@ -20,4 +21,5 @@ public class CopyList {
 			return node;
 		}	
 	}
+	*/
 }

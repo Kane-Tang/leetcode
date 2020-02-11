@@ -9,7 +9,7 @@ public class MergeInterval {
 	private class IntervalComparator implements Comparator<Interval> {
         @Override
         public int compare(Interval a, Interval b) {
-            return a.start < b.start ? -1 : a.start == b.start ? 0 : 1;
+            return a.start - b.start;
         }
     }
 	public List<Interval> merge(List<Interval> intervals) {
@@ -41,13 +41,13 @@ public class MergeInterval {
 		MergeInterval mi = new MergeInterval();
 		Interval i1 = new Interval(2,6);
 		Interval i2 = new Interval(1,3);
-//		Interval i3 = new Interval(8,10);
-//		Interval i4 = new Interval(15,18);
+		Interval i3 = new Interval(8,10);
+		Interval i4 = new Interval(15,18);
 		List<Interval> list = new ArrayList();
 		list.add(i1);
 		list.add(i2);
-//		list.add(i3);
-//		list.add(i4);
+		list.add(i3);
+		list.add(i4);
 		List<Interval> ans = new ArrayList();
 		ans = mi.merge(list);
 		for(int i=0;i<ans.size();i++) {

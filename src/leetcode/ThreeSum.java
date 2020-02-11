@@ -15,6 +15,7 @@ public class ThreeSum {
 			}
 			int j = i+1;
 			int k = length-1;
+			//i,j,k, three indices of the chosen item
 			int goal = -nums[i];
 			while(j<k) {
 				if(nums[j]+nums[k]==goal) {
